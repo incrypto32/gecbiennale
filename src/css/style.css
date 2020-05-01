@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Maler";
+  src: url("../assets/fonts/maler/Maler.ttf");
+  font-weight: normal;
+}
+
+* {
+  font-family: "Maler";
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #fffad9;
+  height: 100%;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar img {
+  width: 40%;
+  padding: 1rem;
+}
+
+.homePage {
+  width: 100%;
+  height: 100%;
+}
+
+.homePage .content {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  background: #fff5c8;
+  margin-top: 2rem;
+  border-radius: 2rem;
+}
+
+.homePage .content .days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3rem;
+  height: 100%;
+}
+
+.homePage .content .days .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  color: white;
+  text-align: left;
+  border-radius: 1rem;
+  margin: 1rem 1rem;
+  padding: 0.01rem 1rem;
+}
+
+.homePage .content .days .day:nth-of-type(1) {
+  background: #8ed9a0;
+}
+
+.homePage .content .days .day:nth-of-type(1):hover {
+  background: #00ad00;
+}
+
+.homePage .content .days .day:nth-of-type(2) {
+  background: #6bb9d0;
+}
+
+.homePage .content .days .day:nth-of-type(2):hover {
+  background: #00a6cf;
+}
+
+.homePage .content .days .day:nth-of-type(3) {
+  background: #dd848a;
+}
+
+.homePage .content .days .day:nth-of-type(3):hover {
+  background: #f13939;
+}
+
+.homePage .content .days .day h2 {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+}
+
+.homePage .content .days .day .right-arrow {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .homePage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .homePage .content {
+    width: 60%;
+    background: none;
+  }
+  .homePage .content .days .day {
+    width: 40%;
+    height: 10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
