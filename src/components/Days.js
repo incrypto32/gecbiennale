@@ -1,5 +1,5 @@
 import React from 'react'
-
+import bg from "../assets/images/bg.svg"
 function Days() {
     return (
         <div className="content">
@@ -15,6 +15,7 @@ function Days() {
             <h2>day 3</h2><div className="right-arrow">›</div>
           </div>
         </div>
+        {/* <div className="bg"><img src={bg}></img></div> */}
       </div>
     )
 }
