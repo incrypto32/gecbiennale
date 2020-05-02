@@ -215,6 +215,12 @@ body {
   body {
     background-image: none;
   }
+  .navbar {
+    margin-top: 2rem;
+  }
+  .navbar img {
+    width: 35%;
+  }
   .homePage {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -239,7 +245,6 @@ body {
 .catpage {
   height: 90%;
   width: 100%;
-  background: #70dd89;
   border-radius: 2rem 2rem 0 0;
 }
 
@@ -255,10 +260,29 @@ body {
   margin: 2rem 1rem;
   padding: 1rem 0;
   color: #423f3a;
+}
+
+.litpage {
+  background: #70dd89;
+}
+
+.litpage .event {
   background-color: #8ed9a0;
 }
 
-.event:hover {
+.litpage .event:hover {
   background-color: #4ef174;
+}
+
+.artpage {
+  background: #3ca5c5;
+}
+
+.artpage .event {
+  background-color: #6bb9d0;
+}
+
+.artpage .event:hover {
+  background-color: #1087e9;
 }
 /*# sourceMappingURL=style.css.map */

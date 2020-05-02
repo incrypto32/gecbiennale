@@ -10,7 +10,7 @@ function Gec() {
                 <img src={gec} alt="Gec" className="gec-logo" />
                 <img src={logo} alt="Logo" className="main-logo" />
             </div>
-            <div className="dots" ><img src={dots} /></div>
+            <div className="dots" ><img src={dots} alt="dots" /></div>
             <Link to='/home'>
             <div className="go-button"><h2>›</h2></div>
             </Link>

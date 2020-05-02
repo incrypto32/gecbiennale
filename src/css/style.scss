@@ -157,6 +157,13 @@ body {
     body{
         background-image: none;
     }
+    .navbar{
+      margin-top: 2rem;
+      img{
+        width:35%;
+        
+      }
+    }
   .homePage {
     display: flex;
     justify-content: center;
@@ -179,7 +186,7 @@ body {
   height: 90%;
     // position: fixed;
     width: 100%;
-    background: rgb(112, 221, 137);
+    
     // display: flex;
     border-radius: 2rem 2rem 0 0;
     
@@ -199,8 +206,24 @@ body {
   margin:2rem 1rem;
   padding:1rem 0;
   color:$event-text-color;
-  background-color:rgb(142, 217, 160) ;
-  &:hover {
-    background-color:rgb(78, 241, 116) ;
+  
+}
+
+.litpage{
+  background: rgb(112, 221, 137);
+  .event{
+    background-color:rgb(142, 217, 160) ;
+    &:hover {
+      background-color:rgb(78, 241, 116) ;
+    }
+  }
+}
+.artpage{
+  background: rgb(60, 165, 197);
+  .event{
+    background-color:rgb(107, 185, 208) ;
+    &:hover {
+      background-color:rgb(16, 135, 233) ;
+    }
   }
 }

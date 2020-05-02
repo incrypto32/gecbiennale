@@ -1,8 +1,10 @@
 import React from "react";
 import Home from "./Home";
 import NavBar from "./NavBar";
-import { Router, Switch, Route } from "react-router-dom";
+import {  Switch, Route } from "react-router-dom";
 import Literature from "./Literature";
+import Art from "./Art";
+import Spark from "./Spark";
 
 function Routers() {
   return (
@@ -12,7 +14,9 @@ function Routers() {
         <NavBar />
         <Switch>
           <Route path="/home" exact  component={Home} />
-          <Route path="/home/literature"  component={Literature} />
+          <Route path="/home/literature" exact component={Literature} />
+          <Route path="/home/literature/spark"  component={Spark} />
+          <Route path="/home/art"  component={Art} />
         </Switch>
     </div>
     
