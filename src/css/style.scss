@@ -1,5 +1,6 @@
 @import "./fonts";
 $colors: rgb(142, 217, 160), rgb(107, 185, 208), rgb(221, 132, 138);
+$event-text-color:rgb(66, 63, 58);
 $darkcolors: rgb(0, 173, 0), rgb(0, 166, 207), rgb(241, 57, 57);
 * {
   font-family: "Maler";
@@ -19,9 +20,11 @@ body {
 #root{
     height: 100%;
 }
-
+.router {
+  height: 100%;
+}
 .navbar {
-  height:20%;
+  height:10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +35,7 @@ body {
 }
 .homePage {
   width: 100%;
-  height: 80%;
+  height: 90%;
 
   .content {
     height: 100%;
@@ -56,8 +59,11 @@ body {
       justify-content: flex-start;
     //   padding-top: 3rem;
       height: 100%;
+     
       .day {
         display: flex;
+        align-items: center;
+        
         width: 80%;
         color: white;
         text-align: left;
@@ -73,11 +79,14 @@ body {
           }
         }
         h2 {
+          // border:2px solid blue;
+          display: block;
+          line-height: 100%;
           flex: 8;
         }
         .right-arrow {
           flex: 1;
-
+          // border:2px solid blue;
           font-size: 3rem;
         }
       }
@@ -85,6 +94,65 @@ body {
   }
 }
 
+.gec {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  // border: 5px black solid;
+  align-items: center;
+  .dots {
+    position: absolute;
+    top: 0;
+    text-align: right;
+    opacity: 70%;
+    // border: 5px black solid;
+    img {
+      width: 50%;
+    }
+  }
+  .go-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    // border: 5px black solid;
+    text-align: right;
+    width: 100%;
+    font-size: 2rem;
+
+    h2{
+      color: white;
+      display: inline;
+      font-family: ubuntu;
+      line-height: 100%;
+      margin: 2rem 2rem;
+      padding: 0rem 2rem;
+      border-radius: 1rem;
+      background-color: black;
+    }
+  }
+  .gec-inner {
+    display: flex;
+    height:70%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10rem;
+    // border: 2px black solid;
+    .main-logo{
+      // border: 2px black solid;
+      display: block;
+      width:60%;
+    }
+    .gec-logo{
+      display: block;
+      // border: 2px black solid;
+      width:70%;
+    }
+  }
+}
 @media only screen and (min-width: 768px) {
     body{
         background-image: none;
@@ -104,5 +172,35 @@ body {
         }
       }
     }
+  }
+}
+
+.catpage{
+  height: 90%;
+    // position: fixed;
+    width: 100%;
+    background: rgb(112, 221, 137);
+    // display: flex;
+    border-radius: 2rem 2rem 0 0;
+    
+    // display: flex;
+    // overflow: hidden;
+    h1{
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+}
+
+.event{
+  border-radius: 2rem;
+  text-align: center;
+  margin:2rem 1rem;
+  padding:1rem 0;
+  color:$event-text-color;
+  background-color:rgb(142, 217, 160) ;
+  &:hover {
+    background-color:rgb(78, 241, 116) ;
   }
 }
