@@ -2,10 +2,11 @@
 import React, { Component } from 'react'
 import { db } from '../firebase';
 import SparkItems from './SparkItems';
-import BeTheWriter from './BeTheWriter';
+
 import BookReview from './BookReview';
 import Protogonist from './Protogonist';
 import StoryBoard from './StoryBoard';
+import BeTheMaker from './BeTheMaker';
 
 
 export class Spark extends Component {
@@ -31,15 +32,15 @@ export class Spark extends Component {
         console.log(this.props.collection)
         // if(collection ==='spark'){
         //   page=<SparkItems posts={posts} eventName={this.props.eventName}/>
-        // }else if(collection === 'bethewriter'){
+        // }else if(collection === 'bethemaker'){
          
         // }
         switch(collection) {
           case 'spark':
             page=<SparkItems posts={posts} eventName={this.props.eventName}/>
             break;
-          case 'bethewriter':
-            page=<BeTheWriter posts={posts} eventName={this.props.eventName} />
+          case 'bethemaker':
+            page=<BeTheMaker posts={posts} eventName={this.props.eventName} />
             break;
           case 'bookreview':
             console.log("BooKKKKK")

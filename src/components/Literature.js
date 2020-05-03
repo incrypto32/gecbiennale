@@ -17,7 +17,7 @@ function Literature() {
       <div
         className="event"
         onClick={function() {
-          history.push("/home/literature/bethewriter");
+          history.push("/home/literature/bethemaker");
         }}
       >
         <h2>Be the writer</h2>

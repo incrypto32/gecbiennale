@@ -1,23 +1,24 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-function StoryBoard(props) {
+function BeTheMaker(props) {
   let posts = props.posts;
   let i = 0;
-
   function processStory(postItem) {
+    
     return (
       <a
-        href={"http://" + postItem["image"]}
+        href={"http://" + postItem["link"]}
         key={i++}
         style={{ textDecoration: "none" }}
       >
-        <div className="lititem imgevent" style={{ textAlign: "center" }}>
-          <img src={postItem["image"]} alt="its" className="img-event-img" />
-          <h2>{postItem["title"]}</h2>
+        <div className="lititem">
+          <h3>{postItem["title"]}</h3>
           {postItem["name"]}
-          <br /> {postItem["sd"]}
           <br />
+          {postItem["movie"]}
+          <br />
+          S4 cse
         </div>
       </a>
     );
@@ -31,4 +32,4 @@ function StoryBoard(props) {
   );
 }
 
-export default StoryBoard;
+export default BeTheMaker;
