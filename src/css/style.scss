@@ -1,30 +1,38 @@
 @import "./fonts";
 $colors: rgb(142, 217, 160), rgb(107, 185, 208), rgb(221, 132, 138);
-$event-text-color:rgb(66, 63, 58);
+$r:rgb(221, 132, 138);
+$g:rgb(142, 217, 160);
+$b: rgb(107, 185, 208);
+$event-text-color: rgb(66, 63, 58);
 $darkcolors: rgb(0, 173, 0), rgb(0, 166, 207), rgb(241, 57, 57);
 * {
-  font-family: "Maler";
   // border: 2px black solid;
   // overflow: auto;
   margin: 0;
-  padding:0;
+  padding: 0;
 }
 html {
   height: 100%;
 }
 body {
+  font-family: "Maler";
   background: rgb(255, 250, 217);
- 
+  background-image: url("../assets/images/bg.svg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100%;
 }
-#root{
-    height: 100%;
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 .router {
   height: 100%;
 }
 .navbar {
-  height:10%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,46 +46,34 @@ body {
   height: 90%;
 
   .content {
-    height: 100%;
-    // position: fixed;
+   
     width: 100%;
-    background: rgb(255, 245, 200);
-    // display: flex;
+   
     border-radius: 2rem 2rem 0 0;
-    background-image:url('../assets/images/bg.svg');
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    // display: flex;
-    overflow: hidden;
+   
+    
     .days {
       // border:2px solid red;
-      padding: 5rem 2rem;
-      
+      padding: 2rem 2rem;
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-    //   padding-top: 3rem;
+      //   padding-top: 3rem;
       height: 100%;
-     
+
       .day {
         display: flex;
         align-items: center;
-        
-        width: 80%;
+
+        width: 90%;
         color: white;
         text-align: left;
         border-radius: 1rem;
         margin: 1rem 1rem;
         padding: 0.01rem 1rem;
-        @for $i from 1 through 3 {
-          &:nth-of-type(#{$i}) {
-            background: nth($list: $colors, $n: $i);
-            &:hover{
-                background: nth($list: $darkcolors, $n: $i);
-            }
-          }
-        }
+        
         h2 {
           // border:2px solid blue;
           display: block;
@@ -89,6 +85,15 @@ body {
           // border:2px solid blue;
           font-size: 3rem;
         }
+      }
+      .r{
+        background-color: $r;
+      }
+      .b{
+        background-color: $b;
+      }
+      .g{
+        background-color: $g;
       }
     }
   }
@@ -121,7 +126,7 @@ body {
     width: 100%;
     font-size: 2rem;
 
-    h2{
+    h2 {
       color: white;
       display: inline;
       font-family: ubuntu;
@@ -134,36 +139,134 @@ body {
   }
   .gec-inner {
     display: flex;
-    height:70%;
+    height: 70%;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 10rem;
     // border: 2px black solid;
-    .main-logo{
+    .main-logo {
       // border: 2px black solid;
       display: block;
-      width:60%;
+      width: 60%;
     }
-    .gec-logo{
+    .gec-logo {
       display: block;
       // border: 2px black solid;
-      width:70%;
+      width: 70%;
     }
   }
 }
+
+.catpage {
+  height: 90%;
+  // position: fixed;
+  width: 100%;
+
+  // display: flex;
+  border-radius: 2rem 2rem 0 0;
+
+  // display: flex;
+  // overflow: hidden;
+  h1 {
+    padding-top: 1rem;
+    text-align: center;
+    color: white;
+  }
+}
+
+.eventpage {
+  h2 {
+    padding-top: 1rem;
+    text-align: center;
+    color: rgb(13, 28, 48);
+  }
+}
+.event {
+  border-radius: 2rem;
+  text-align: center;
+  margin: 2rem 1rem;
+  padding: 1rem 0;
+  color: $event-text-color;
+}
+
+.litpage {
+  background: rgb(142, 217, 160);
+  .event {
+    background-color: rgb(153, 236, 172);
+    &:hover {
+      background-color: rgb(78, 241, 116);
+    }
+  }
+}
+.artpage {
+  background: rgb(60, 165, 197);
+  .event {
+    background-color: rgb(107, 185, 208);
+    &:hover {
+      background-color: rgb(16, 135, 233);
+    }
+  }
+}
+
+.sparkpage {
+  height: auto;
+  width: auto;
+  .topic {
+    // border: 2px black solid;
+    font-family: "Fira Sans";
+    text-align: center;
+    padding: 2rem 1rem;
+    img {
+      // border: 2px black solid;
+      // display: block;
+      border-radius: 1rem;
+      overflow: hidden;
+      // padding: 2rem 1rem;
+      width: 70%;
+    }
+  }
+  .lititem {
+    // height: 4rem;
+
+    // width: 100%;
+    font-family: "Fira Sans";
+    border-radius: 1rem;
+    // display: flex;
+    padding: .5rem;
+    text-align: left;
+    margin: 2rem;
+    background-color: rgb(248, 244, 216);
+    box-shadow: 2px 2px 3px rgb(119, 113, 113);
+    // border: 2px black solid;
+    color: rgb(25, 29, 44);
+    font-size: 1.2rem;
+
+    img{
+      width: 100%;
+      border-radius: 0rem;
+      box-shadow: 3px 3px 3px rgb(119, 113, 113);
+    }
+    .img-event-img{
+      border-radius:none ;
+    }
+  }
+  .imgevent{
+    box-shadow: none;
+    background: none;
+  }
+}
 @media only screen and (min-width: 768px) {
-    body{
-        background-image: none;
+  body {
+    background-image: none;
+  }
+  .navbar {
+    margin-top: 2rem;
+    img {
+      width: 35%;
     }
-    .navbar{
-      margin-top: 2rem;
-      img{
-        width:35%;
-        
-      }
-    }
+  }
   .homePage {
     display: flex;
     justify-content: center;
@@ -175,55 +278,68 @@ body {
           width: 40%;
           height: 10%;
           align-items: center;
-
         }
       }
     }
   }
-}
 
-.catpage{
-  height: 90%;
-    // position: fixed;
-    width: 100%;
-    
-    // display: flex;
-    border-radius: 2rem 2rem 0 0;
-    
-    // display: flex;
-    // overflow: hidden;
-    h1{
-      text-align: center;
-      color: white;
-      padding: 2rem;
+  .gec {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    justify-content: center;
+    // border: 5px black solid;
+    align-items: center;
+    .dots {
+      position: absolute;
+      top: 0;
+      text-align: right;
+      opacity: 70%;
+      // border: 5px black solid;
+      img {
+        width: 50%;
+      }
     }
-
-}
-
-.event{
-  border-radius: 2rem;
-  text-align: center;
-  margin:2rem 1rem;
-  padding:1rem 0;
-  color:$event-text-color;
+    .go-button {
+      position: absolute;
+      bottom: 2rem;
+      right: 0;
+      // border: 5px black solid;
+      text-align: right;
+      width: 100%;
+      font-size: 2rem;
   
-}
-
-.litpage{
-  background: rgb(112, 221, 137);
-  .event{
-    background-color:rgb(142, 217, 160) ;
-    &:hover {
-      background-color:rgb(78, 241, 116) ;
+      h2 {
+        color: white;
+        display: inline;
+        font-family: ubuntu;
+        line-height: 100%;
+        margin: 2rem 2rem;
+        padding: 0rem 2rem;
+        border-radius: 1rem;
+        background-color: black;
+      }
     }
-  }
-}
-.artpage{
-  background: rgb(60, 165, 197);
-  .event{
-    background-color:rgb(107, 185, 208) ;
-    &:hover {
-      background-color:rgb(16, 135, 233) ;
+    .gec-inner {
+      display: flex;
+      height: 70%;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10rem;
+      // border: 2px black solid;
+      .main-logo {
+        // border: 2px black solid;
+        display: block;
+        width: 60%;
+      }
+      .gec-logo {
+        display: block;
+        // border: 2px black solid;
+        width: 50%;
+      }
     }
   }
 }

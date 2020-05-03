@@ -6,6 +6,8 @@ import Literature from "./Literature";
 import Art from "./Art";
 import Spark from "./Spark";
 
+
+
 function Routers() {
   return (
     
@@ -14,9 +16,15 @@ function Routers() {
         <NavBar />
         <Switch>
           <Route path="/home" exact  component={Home} />
-          <Route path="/home/literature" exact component={Literature} />
-          <Route path="/home/literature/spark"  component={Spark} />
-          <Route path="/home/art"  component={Art} />
+          <Route path="/home" exact component={Literature} />
+          <Route path="/home/spark"  component={() => <Spark eventName='spark'   collection='spark'/>} />
+         <Route path="/home/bethewriter"  component={() => <Spark eventName='bethewriter'   collection='bethewriter'/>} /> 
+         <Route path="/home/bookreview"  component={() => <Spark eventName='bookreview'   collection='bookreview'/>} /> 
+         <Route path="/home/protogonist"  component={() => <Spark eventName='protogonist'   collection='protogonist'/>} /> 
+         <Route path="/home/storyboard"  component={() => <Spark eventName='storyboard'   collection='storyboard'/>} /> 
+          <Route path="/home/art" exact  component={Art} />
+          <Route path="/home/art/origami" exact  component={() => <Spark eventName='origami'   collection='storyboard'/>} /> 
+          
         </Switch>
     </div>
     

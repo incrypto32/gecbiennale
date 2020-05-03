@@ -4,8 +4,25 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../assets/fonts/Fira/FiraSans-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../assets/fonts/Fira/FiraSans-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../assets/fonts/Fira/FiraSans-Light.ttf");
+  font-weight: 300;
+}
+
 * {
-  font-family: "Maler";
   margin: 0;
   padding: 0;
 }
@@ -15,12 +32,23 @@ html {
 }
 
 body {
+  font-family: "Maler";
   background: #fffad9;
+  background-image: url("../assets/images/bg.svg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100%;
 }
 
 #root {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .router {
@@ -51,18 +79,12 @@ body {
 }
 
 .homePage .content {
-  height: 100%;
   width: 100%;
-  background: #fff5c8;
   border-radius: 2rem 2rem 0 0;
-  background-image: url("../assets/images/bg.svg");
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  overflow: hidden;
 }
 
 .homePage .content .days {
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,36 +108,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  width: 90%;
   color: white;
   text-align: left;
   border-radius: 1rem;
   margin: 1rem 1rem;
   padding: 0.01rem 1rem;
-}
-
-.homePage .content .days .day:nth-of-type(1) {
-  background: #8ed9a0;
-}
-
-.homePage .content .days .day:nth-of-type(1):hover {
-  background: #00ad00;
-}
-
-.homePage .content .days .day:nth-of-type(2) {
-  background: #6bb9d0;
-}
-
-.homePage .content .days .day:nth-of-type(2):hover {
-  background: #00a6cf;
-}
-
-.homePage .content .days .day:nth-of-type(3) {
-  background: #dd848a;
-}
-
-.homePage .content .days .day:nth-of-type(3):hover {
-  background: #f13939;
 }
 
 .homePage .content .days .day h2 {
@@ -131,6 +129,18 @@ body {
       -ms-flex: 1;
           flex: 1;
   font-size: 3rem;
+}
+
+.homePage .content .days .r {
+  background-color: #dd848a;
+}
+
+.homePage .content .days .b {
+  background-color: #6bb9d0;
+}
+
+.homePage .content .days .g {
+  background-color: #8ed9a0;
 }
 
 .gec {
@@ -211,6 +221,103 @@ body {
   width: 70%;
 }
 
+.catpage {
+  height: 90%;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.catpage h1 {
+  padding-top: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.eventpage h2 {
+  padding-top: 1rem;
+  text-align: center;
+  color: #0d1c30;
+}
+
+.event {
+  border-radius: 2rem;
+  text-align: center;
+  margin: 2rem 1rem;
+  padding: 1rem 0;
+  color: #423f3a;
+}
+
+.litpage {
+  background: #8ed9a0;
+}
+
+.litpage .event {
+  background-color: #99ecac;
+}
+
+.litpage .event:hover {
+  background-color: #4ef174;
+}
+
+.artpage {
+  background: #3ca5c5;
+}
+
+.artpage .event {
+  background-color: #6bb9d0;
+}
+
+.artpage .event:hover {
+  background-color: #1087e9;
+}
+
+.sparkpage {
+  height: auto;
+  width: auto;
+}
+
+.sparkpage .topic {
+  font-family: "Fira Sans";
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.sparkpage .topic img {
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 70%;
+}
+
+.sparkpage .lititem {
+  font-family: "Fira Sans";
+  border-radius: 1rem;
+  padding: .5rem;
+  text-align: left;
+  margin: 2rem;
+  background-color: #f8f4d8;
+  -webkit-box-shadow: 2px 2px 3px #777171;
+          box-shadow: 2px 2px 3px #777171;
+  color: #191d2c;
+  font-size: 1.2rem;
+}
+
+.sparkpage .lititem img {
+  width: 100%;
+  border-radius: 0rem;
+  -webkit-box-shadow: 3px 3px 3px #777171;
+          box-shadow: 3px 3px 3px #777171;
+}
+
+.sparkpage .lititem .img-event-img {
+  border-radius: none;
+}
+
+.sparkpage .imgevent {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     background-image: none;
@@ -240,49 +347,75 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-.catpage {
-  height: 90%;
-  width: 100%;
-  border-radius: 2rem 2rem 0 0;
-}
-
-.catpage h1 {
-  text-align: center;
-  color: white;
-  padding: 2rem;
-}
-
-.event {
-  border-radius: 2rem;
-  text-align: center;
-  margin: 2rem 1rem;
-  padding: 1rem 0;
-  color: #423f3a;
-}
-
-.litpage {
-  background: #70dd89;
-}
-
-.litpage .event {
-  background-color: #8ed9a0;
-}
-
-.litpage .event:hover {
-  background-color: #4ef174;
-}
-
-.artpage {
-  background: #3ca5c5;
-}
-
-.artpage .event {
-  background-color: #6bb9d0;
-}
-
-.artpage .event:hover {
-  background-color: #1087e9;
+  .gec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: 40%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .gec .dots {
+    position: absolute;
+    top: 0;
+    text-align: right;
+    opacity: 70%;
+  }
+  .gec .dots img {
+    width: 50%;
+  }
+  .gec .go-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    text-align: right;
+    width: 100%;
+    font-size: 2rem;
+  }
+  .gec .go-button h2 {
+    color: white;
+    display: inline;
+    font-family: ubuntu;
+    line-height: 100%;
+    margin: 2rem 2rem;
+    padding: 0rem 2rem;
+    border-radius: 1rem;
+    background-color: black;
+  }
+  .gec .gec-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 70%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10rem;
+  }
+  .gec .gec-inner .main-logo {
+    display: block;
+    width: 60%;
+  }
+  .gec .gec-inner .gec-logo {
+    display: block;
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
