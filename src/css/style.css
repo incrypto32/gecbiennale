@@ -318,6 +318,11 @@ body {
   background: none;
 }
 
+/* Style for slider */
+.carousel img{
+  max-height:60vh;
+}
+/* slider style ends here*/
 @media only screen and (min-width: 768px) {
   body {
     background-image: none;
